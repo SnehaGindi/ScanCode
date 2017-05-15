@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IpR-zC-SBK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan View Controller-->
+        <scene sceneID="gCu-ed-OW2">
+            <objects>
+                <viewController id="IpR-zC-SBK" customClass="ScanViewController" customModule="ScanCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0HV-HP-Ev5"/>
+                        <viewControllerLayoutGuide type="bottom" id="VNq-W1-Mw0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JS8-a1-G3d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QR Code not detected.." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWc-8X-s94">
+                                <rect key="frame" x="185" y="593" width="181" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="QR Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkU-9q-cI2">
+                                <rect key="frame" x="51" y="593" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VNq-W1-Mw0" firstAttribute="top" secondItem="XkU-9q-cI2" secondAttribute="bottom" constant="53" id="07E-TJ-f8x"/>
+                            <constraint firstItem="VNq-W1-Mw0" firstAttribute="top" secondItem="jWc-8X-s94" secondAttribute="bottom" constant="20" id="NPE-zY-pHh"/>
+                            <constraint firstItem="jWc-8X-s94" firstAttribute="leading" secondItem="XkU-9q-cI2" secondAttribute="trailing" constant="60" id="QzC-ab-nsW"/>
+                            <constraint firstAttribute="trailing" secondItem="jWc-8X-s94" secondAttribute="trailing" constant="9" id="XCD-Zb-JKt"/>
+                            <constraint firstItem="XkU-9q-cI2" firstAttribute="leading" secondItem="JS8-a1-G3d" secondAttribute="leading" constant="51" id="uex-jb-awd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codelabel" destination="jWc-8X-s94" id="OVi-a5-Uei"/>
+                        <outlet property="qrcode" destination="XkU-9q-cI2" id="mp4-6r-hyx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDM-p7-Qz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="9.4452773613193415"/>
+        </scene>
+    </scenes>
+</document>
